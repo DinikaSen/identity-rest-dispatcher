@@ -37,7 +37,7 @@
     <import resource="classpath:META-INF/cxf/oidc-scope-management-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-recovery-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/script-libraries-server-v1-cxf.xml"/>
-
+    <import resource="classpath:META-INF/cxf/feedback-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/identity-governance-server-v1-cxf.xml"/>
     <import resource="classpath:META-INF/cxf/user-store-v1-cxf.xml"/>
     <context:property-placeholder/>
@@ -94,9 +94,11 @@
             <bean class="org.wso2.carbon.identity.rest.api.user.application.v1.MeApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.recovery.v1.RecoveryApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.challenge.v1.UserIdApi"/>
+
             <bean class="org.wso2.carbon.identity.rest.api.user.session.v1.UserIdApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.authorized.apps.v1.UserIdApi"/>
             <bean class="org.wso2.carbon.identity.rest.api.user.association.v1.UserIdApi"/>
+            <bean class="org.wso2.carbon.identity.rest.api.user.feedback.v1.FeedbackApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
